@@ -1,0 +1,55 @@
+POST http://localhost:8080/users/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin1234"
+}
+
+###
+POST http://localhost:8080/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZWZiY2FhNDk0OGJlMjZiMDdjNDNjIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzUxMTI3OCwiZXhwIjoxNjkzNTk3Njc4fQ.fOMs4HAKihDNRQpmDly3h8ShCfNz579ARaFlXLuyTNM
+Content-Type: application/json
+
+{
+    "first_name": "john",
+    "last_name": "baz",
+    "age": 17,
+    "role": "employee",
+    "username": "fooba10",
+    "password": "12345678"
+}
+
+###     
+GET http://localhost:8080/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTE0MjU1YjMwYzU0MTljODkxMzNjIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzMyNjY2NSwiZXhwIjoxNjkzNDEzMDY1fQ.kDCP_zbIOfm3wf2hsnh6om5LEEPZclylJmV3Dp32ptM
+
+###     
+GET http://localhost:8080/users/?sort[by]=age&sort[order]=desc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTE0MjU1YjMwYzU0MTljODkxMzNjIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzMyNjY2NSwiZXhwIjoxNjkzNDEzMDY1fQ.kDCP_zbIOfm3wf2hsnh6om5LEEPZclylJmV3Dp32ptM
+
+###     
+GET http://localhost:8080/users/64ee14255b30c5419c89133d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTE0MjU1YjMwYzU0MTljODkxMzNjIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzMyNjY2NSwiZXhwIjoxNjkzNDEzMDY1fQ.kDCP_zbIOfm3wf2hsnh6om5LEEPZclylJmV3Dp32ptM
+
+###
+PATCH http://localhost:8080/users/64ee14255b30c5419c89133d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTIwNWI5OWQyNWNkZTgzMTk0OWIxIiwicm9sZSI6ImVtcGxveWVlIn0sImlhdCI6MTY5MzMyNzQ2MCwiZXhwIjoxNjkzNDEzODYwfQ.nUIqAk1w_PX14OexAf7gts1W2s2jdJuMNJRIjLt3kN0
+Content-Type: application/json
+
+{
+    "first_name": "admin"
+}
+
+###
+PATCH http://localhost:8080/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZWZiY2FhNDk0OGJlMjZiMDdjNDNjIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5Mzc1NjAyNiwiZXhwIjoxNjkzODQyNDI2fQ.K_c7pf1zm9JDiE2G_ERdYsCfZf9MpqINe0HqUJ8zpgg
+Content-Type: application/json  
+
+{
+   "first_name": "admin"
+}
+
+###     
+DELETE  http://localhost:8080/users/64edd77262c842374b999de1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZTE0MjU1YjMwYzU0MTljODkxMzNjIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzMyNjY2NSwiZXhwIjoxNjkzNDEzMDY1fQ.kDCP_zbIOfm3wf2hsnh6om5LEEPZclylJmV3Dp32ptM

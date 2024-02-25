@@ -1,0 +1,59 @@
+POST http://localhost:8080/users/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin1234"
+}
+
+###
+POST http://localhost:8080/user-guides
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZWZiY2FhNDk0OGJlMjZiMDdjNDNjIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5Mzc1NjA5MSwiZXhwIjoxNjkzODQyNDkxfQ.k14HprdhT-1sXMQRGlxz0Z5r0FWl87Fn1HhE4UJKHSw
+Content-Type: application/json
+
+{
+    "user_id": "64eefbcaa4948be26b07c43d",
+    "guide_id": "64f466ea947ecfa9fbf3a2f5"
+}
+
+###
+POST http://localhost:8080/user-guides/bulk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZWZiY2FhNDk0OGJlMjZiMDdjNDNjIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5MzkwMjA5MywiZXhwIjoxNjkzOTg4NDkzfQ.-qjwHWTfp8Kjtt4QoYvgRQ_L6xOSt1OiWpX2HJJJtTw
+Content-Type: application/json
+
+{
+    "guide_id": "64eefbcaa4948be26b07c43d",
+    "user_id": ["64eefbcaa4948be26b07c43c", "64eefbcaa4948be26b07c43d"]
+}
+
+###
+POST http://localhost:8080/user-guides/64f4ae54aa9be99f0506d0bb/read
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZWZiY2FhNDk0OGJlMjZiMDdjNDNjIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5Mzc1NjA5MSwiZXhwIjoxNjkzODQyNDkxfQ.k14HprdhT-1sXMQRGlxz0Z5r0FWl87Fn1HhE4UJKHSw
+
+
+
+###         
+GET http://localhost:8080/user-guides
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZWZiY2FhNDk0OGJlMjZiMDdjNDNjIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5Mzc1NjA5MSwiZXhwIjoxNjkzODQyNDkxfQ.k14HprdhT-1sXMQRGlxz0Z5r0FWl87Fn1HhE4UJKHSw
+
+###     
+GET http://localhost:8080/user-guides?page[offset]=1&page[limit]=2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZWZiY2FhNDk0OGJlMjZiMDdjNDNjIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5Mzc1NjA5MSwiZXhwIjoxNjkzODQyNDkxfQ.k14HprdhT-1sXMQRGlxz0Z5r0FWl87Fn1HhE4UJKHSw
+
+###     
+GET http://localhost:8080/user-guides/64f4ae54aa9be99f0506d0bb
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZWZiY2FhNDk0OGJlMjZiMDdjNDNjIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5Mzc1NjA5MSwiZXhwIjoxNjkzODQyNDkxfQ.k14HprdhT-1sXMQRGlxz0Z5r0FWl87Fn1HhE4UJKHSw
+
+###
+PATCH http://localhost:8080/user-guides/64ee1484fbbf7cb856e4d345
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZWZiY2FhNDk0OGJlMjZiMDdjNDNjIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5Mzc1NjA5MSwiZXhwIjoxNjkzODQyNDkxfQ.k14HprdhT-1sXMQRGlxz0Z5r0FWl87Fn1HhE4UJKHSw
+Content-Type: application/json
+
+{
+    "title": "foobaz updated"
+}
+
+
+###     
+DELETE  http://localhost:8080/user-guides/64eedddd11e5315ad88b7a72
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjRlZWZiY2FhNDk0OGJlMjZiMDdjNDNjIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTY5Mzc1NjA5MSwiZXhwIjoxNjkzODQyNDkxfQ.k14HprdhT-1sXMQRGlxz0Z5r0FWl87Fn1HhE4UJKHSw
